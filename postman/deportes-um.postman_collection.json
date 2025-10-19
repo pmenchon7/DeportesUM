@@ -1,0 +1,157 @@
+{
+  "info": {
+    "_postman_id": "b2e3942a-45ad-4d28-9c43-um2025",
+    "name": "Deportes UM API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:8080"
+    }
+  ],
+  "item": [
+    {
+      "name": "Listar competiciones",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/competitions",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "competitions"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Crear competici\u00f3n",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nombre\": \"Torneo Primavera\",\n  \"deporte\": \"Baloncesto\",\n  \"fechaInicio\": \"2025-04-01\",\n  \"fechaFin\": \"2025-05-10\",\n  \"numPistas\": 2,\n  \"diasReservados\": [\n    \"2025-04-01\"\n  ]\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/competitions",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "competitions"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Listar equipos de una competici\u00f3n",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/competitions/1/teams",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "competitions",
+            "1",
+            "teams"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Registrar nuevo equipo",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nombre\": \"Arquitectura FC\"\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/competitions/1/teams",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "competitions",
+            "1",
+            "teams"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Generar primera jornada",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/competitions/1/matches/generate",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "competitions",
+            "1",
+            "matches",
+            "generate"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Listar partidos generados",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/competitions/1/matches",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "competitions",
+            "1",
+            "matches"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Equipos no asignados",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/competitions/1/matches/unassigned",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "competitions",
+            "1",
+            "matches",
+            "unassigned"
+          ]
+        }
+      }
+    }
+  ]
+}
