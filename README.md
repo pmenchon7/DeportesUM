@@ -19,7 +19,7 @@ Implementa una **API REST con Spring Boot** para la gestión de competiciones de
 
 1. Clona o descomprime el proyecto  
    ```bash
-   git clone https://github.com/<tu_usuario>/deportes-um.git
+   git clone https://github.com/pmenchon7/deportes-um.git
    ```
    o descarga el ZIP y ábrelo en IntelliJ IDEA.
 
