@@ -1,0 +1,14 @@
+{
+  "id": "7e43b7e0-2025-um-env",
+  "name": "Deportes UM Localhost",
+  "values": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:8080",
+      "enabled": true
+    }
+  ],
+  "_postman_variable_scope": "environment",
+  "_postman_exported_at": "2025-10-17T00:00:00Z",
+  "_postman_exported_using": "Postman GPT Generator"
+}
